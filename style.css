@@ -1,120 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
-*{
+* {
     box-sizing: border-box;
-    
 }
 
-body{
+body {
     margin: 0;
-    background-color:#3572EF;
-     font-family: "Poppins", sans-serif;
+    background-color: #1C1C1E;
+    font-family: "Poppins", sans-serif;
+    color: #F2F2F7;
 }
 
-header{
-    background-color:#3ABEF9;
+header {
+    background-color: #212121; 
     padding: 1rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .search {
-padding: 0.5rem 1rem;
-border-radius: 50px;
-border: 2px solid blueviolet;
-background-color: transparent;
-font-family: inherit;
-color: #eee;
-font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 2px solid #FFD600; 
+    background-color: #212121; 
+    font-family: inherit;
+    color: #FFFFFF;
+    font-size: 1rem;
+    width: 200px; 
 }
 
-.search::placeholder{
-    color: #afb2dc;
+.search::placeholder {
+    color: #FFCC00;
 }
 
-.search:focus{
+.search:focus {
     outline: none;
-    background-color: black;
+    background-color: #303030; 
 }
 
-
-main{
+main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; 
 }
 
-
-/* ye baad me dekhte hai */
-
-.movie{
-    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
-    border-radius: 3px;
+.movie {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
     width: 300px;
-    background-color: #7E8EF1;
+    background-color: #303030; 
     margin: 1rem;
     overflow: hidden;
     position: relative;
-
+    transition: transform 0.3s ease; 
 }
 
-.movie img{
- width: 100%;
-   
+.movie:hover {
+    transform: translateY(-5px); 
 }
 
-.movie-info{
+.movie img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.movie-info {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem 1rem;
-    color: #eee;
+    color: #FFFFFF;
     letter-spacing: 0.5px;
     align-items: center;
 }
 
-.movie-info h3{
+.movie-info h3 {
     margin: 0;
+    font-size: 1.2rem; 
 }
 
-.movie-info span{
-    background-color: #22254b;
+.movie-info span {
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
     font-weight: bold;
 }
 
-.movie-info span.green{
-    color: rgb(46, 194, 46);
-}
-.movie-info span.orange{
- color: orange;
-}
-.movie-info span.red{
-    color: red;
-
+.movie-info span.green {
+    color: #43A047; 
 }
 
-.overview{
+.movie-info span.orange {
+    color: #FB8C00; 
+}
+
+.movie-info span.red {
+    color: #E53935; 
+}
+
+.overview {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); 
     padding: 2rem;
     transform: translateY(100%);
-    transition: transform 1s ease-in;
+    transition: transform 0.5s ease; 
     max-width: 100%;
     overflow: auto;
-
-
-
+    color: #FFFFFF; 
+    font-size: 0.9rem; 
 }
 
-.movie:hover .overview{
+.movie:hover .overview {
     transform: translateY(0);
-
 }
 
-.overview h4{
+.overview h4 {
     margin-top: 0;
 }
